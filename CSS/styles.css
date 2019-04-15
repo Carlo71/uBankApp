@@ -222,6 +222,7 @@ form .form-group.row:not(:last-child) {
   #lnkBack {
       color: #F07824;
       font-size: 28px;
+      display: none;
   }
 
   #lnkNext {
@@ -235,7 +236,6 @@ form .form-group.row:not(:last-child) {
   }
 
   #txtRight {
-      width: 280px;
       text-align: right;
       color: white;
       margin-left: auto;
@@ -251,37 +251,33 @@ footer {
     background-color: #16487E;
 }
 
-@media (max-width: 1500px) and (min-width: 1201px) {
-    #CircleImgContainer > svg {
-        width: 160px;
-    }
-    
-    #txtRight {
-        font-size: 24px;
-        width: 200px;
-    }
-}
-
 @media (max-width: 1500px) {
     body {
         font-size: 26px;
         background-image: none;
     }
 
+    #CircleImgContainer > svg {
+      width: 200px;
+    }
+
     #txtRight {
         color: #16487E;
+        font-size: 24px;
     }
 }
 
 @media (max-width: 1200px) {
     #CircleImgContainer {
-        width: 48%;
         display: inline-block;
         text-align: center;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        width: auto;        
     }
 
     #txtRight_Wrapper {
-        width: 48%;
         display: inline-block;
         margin-top: initial;
     }
@@ -290,11 +286,16 @@ footer {
         text-align: center;
         margin-right: auto;
     }
+
+    #Sidebar {
+        margin-top: 50px;
+        position: initial;
+    }
 }
 
 @media (max-width: 992px) {
     #imgHeader {
-        width: 280px;
+        width: 180px;
     }
 
     footer {
@@ -308,7 +309,7 @@ footer {
 
 @media (max-width: 720px) {
     #CircleImgContainer > svg {
-        width: 200px;
+        width: 120px;
     }
 
     #txtRight {
