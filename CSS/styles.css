@@ -236,6 +236,7 @@ form .form-group.row:not(:last-child) {
   }
 
   #txtRight {
+      width: 55%;
       text-align: right;
       color: white;
       margin-left: auto;
@@ -285,6 +286,7 @@ footer {
     #txtRight {
         text-align: center;
         margin-right: auto;
+        width: 100%;
     }
 
     #Sidebar {
@@ -298,6 +300,10 @@ footer {
         width: 180px;
     }
 
+    #CircleImgContainer > svg {
+      width: 120px;
+    }
+    
     footer {
         font-size: 30px;
         height: 75px;
@@ -308,10 +314,6 @@ footer {
 }
 
 @media (max-width: 720px) {
-    #CircleImgContainer > svg {
-        width: 120px;
-    }
-
     #txtRight {
         font-size: 20px;
     }
