@@ -146,7 +146,7 @@
                     </div>                                         
                 </form>
             </div>
-            <div class="col-xl-3">
+            <div id="Sidebar" class="col-xl-3">
                 <div id="CircleImgContainer">
                     <svg xml:space="preserve" viewBox="-100 -100 200 200" height="100%" width="100%" version="1.1">
                         <defs>
@@ -257,7 +257,6 @@
             }
         });
 
-
         function formatNumber(n) {
             return n.replace(/\D/g, "").replace(/\B(?=(\d{3})+(?!\d))/g, ",")
         }
@@ -310,39 +309,35 @@
 
         $('#lnkNext').on('click', function(e) {
             e.preventDefault();
-            if (first.is(':hidden')) {
-                alert('You are already in the last page.');
-            }
-            else {
-                first.animate({
-                    left: '3000px'
-                }, 1000, function() {
-                    first.css('display', 'none');
-                    second.css('display', 'block');
-                    second.css('position','relative');
-                    second.animate({
-                        left:'0px'
-                    }, 1000);                   
-                });
-            }
+            first.animate({
+                left: '3000px'
+            }, 1000, function() {
+                first.css('display', 'none');
+                second.css('display', 'block');
+                second.css('position','relative');
+                second.animate({
+                    left:'0px'
+                }, 500);                   
+            });
+
+            $('#lnkBack').show();
+            $('#lnkNext').hide();
         });
 
         $('#lnkBack').on('click', function(e) {
             e.preventDefault();
-            if (second.is(':hidden')) {
-                alert('You are already in the first page.');
-            }
-            else {
-                second.animate({
-                    left: '-3000px'
-                }, 1000, function() {
-                    second.css('display', 'none');
-                    first.css('display', 'block');
-                    first.animate({
-                        left: '0px'
-                    }, 1000);
-                })
-            }
+            second.animate({
+                left: '-3000px'
+            }, 1000, function() {
+                second.css('display', 'none');
+                first.css('display', 'block');
+                first.animate({
+                    left: '0px'
+                }, 500);
+            })
+
+            $('#lnkBack').hide();
+            $('#lnkNext').show();
         });
     </script>
 </body>
